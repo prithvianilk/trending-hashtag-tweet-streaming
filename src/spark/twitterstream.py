@@ -35,7 +35,7 @@ class MyListener(tweepy.Stream):
         try:
             processed = json.loads(data)
             tweettext=processed['text']
-            self.conn.send("tweettext".encode())
+            self.conn.send(tweettext.encode())
             print("Fetched: ",tweettext)
         except BaseException as e:
             print("Error(on data): %s" % str(e))
@@ -72,4 +72,3 @@ twitter_stream = MyListener(consumer_key, consumer_secret, access_token, access_
 twitter_stream.setCon(c_socket)
 
 twitter_stream.filter(track=['#ElonMusk',"#Ukraine","#IPL","#Valorant","#KGFChapter2"])
-
