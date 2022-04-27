@@ -14,5 +14,5 @@ RUN wget https://archive.apache.org/dist/spark/spark-3.0.1/spark-3.0.1-bin-hadoo
 
 WORKDIR app
 COPY . /app
-RUN pip3 install cython==0.29.21 numpy==1.18.5 && pip3 install pytest pyspark pandas==1.0.5 requests requests-oauthlib kafka-python
+RUN pip3 install cython==0.29.21 numpy==1.18.5 && pip3 install tweepy pytest pyspark pandas==1.0.5 requests requests-oauthlib kafka-python
 ENV PYSPARK_PYTHON=python3
