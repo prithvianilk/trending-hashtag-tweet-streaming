@@ -1,3 +1,2 @@
-# twitter-data-spark-streaming
+# Twitter Data Streaming
 
-Database Technologies Project
