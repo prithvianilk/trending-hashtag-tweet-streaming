@@ -6,10 +6,10 @@ RUN apt-get update && \
 
 RUN wget https://archive.apache.org/dist/spark/spark-3.0.1/spark-3.0.1-bin-hadoop3.2.tgz && \
     tar xvf spark-3.0.1-bin-hadoop3.2.tgz && \
-    mv spark-3.0.1-bin-hadoop3.2/ /usr/local/spark && \
+    mv spark-3.0.1-bin-hadoop3.2/ /opt/spark && \
     wget https://archive.apache.org/dist/kafka/1.1.0/kafka_2.11-1.1.0.tgz && \
     tar -xzf kafka_2.11-1.1.0.tgz && \
-    mv kafka_2.11-1.1.0 /usr/local/kafka && \
+    mv kafka_2.11-1.1.0 /opt/kafka && \
     ln -s /usr/local/spark spark
 
 WORKDIR app
