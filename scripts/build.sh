@@ -1,1 +1,0 @@
-docker build -t dbt-project --platform linux/arm64 .
